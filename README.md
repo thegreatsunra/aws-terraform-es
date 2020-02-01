@@ -21,7 +21,7 @@ This is the AWS [Creating a Search Application](https://docs.aws.amazon.com/elas
 1. Open `terraform/lambda/searchFunction/index.js` and update `search-movies-YOUR_MOVIES_DOMAIN_ID_HERE.us-east-1.es.amazonaws.com` with the actual value for your Elasticsearch movies domain
 1. Run `terraform plan` and then `terraform apply` to update the Lambda function
 1. Upload the `bulk_movies.json` file to your domain via `cd ../data && curl -XPOST https://search-movies-YOUR_MOVIES_DOMAIN_ID_HERE.us-east-1.es.amazonaws.com/_bulk --data-binary @bulk_movies.json -H 'Content-Type: application/json'`
-1. Change API Gateway endpoint in `www/scripts/search.js` to `https://YOUR_APIGATEWAY_ID_HERE.execute-api.us-east-1.amazonaws.com/searchApiTest/search
+1. Change API Gateway endpoint in `www/scripts/search.js` to `https://YOUR_APIGATEWAY_ID_HERE.execute-api.us-east-1.amazonaws.com/searchApiTest/search`
 1. `cd ../www && serve .` (assuming you've installed serve via `npm install -g serve`)
 1. Open http://localhost:5000
 1. Search for something and it should all work like magic
