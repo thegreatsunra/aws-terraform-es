@@ -13,7 +13,7 @@ resource "aws_elasticsearch_domain" "esDomain" {
 		volume_size = 10
 	}
 
-  access_policies = <<CONFIG
+	access_policies = <<CONFIG
 {
 	"Version": "2012-10-17",
 	"Statement": [
