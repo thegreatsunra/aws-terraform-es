@@ -13,7 +13,7 @@ This is the AWS [Creating a Search Application](https://docs.aws.amazon.com/elas
 ## Installation
 
 1. Clone repo
-1. Copy `terraform/config.example.tf` to `terraform/config.tf` and change the variable values to match your own
+1. Copy `terraform/config.tf.example` to `terraform/config.tf` and change the variable values to match your own
 1. `cd terraform && terraform init`
 1. `terraform plan` (assuming you've installed terraform)
 1. `terraform apply`
