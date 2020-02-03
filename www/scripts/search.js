@@ -1,4 +1,4 @@
-// Update this variable to point to your domain.
+// Update this variable to point to your API Gateway.
 var apigatewayendpoint = 'https://YOUR_APIGATEWAY_ID_HERE.execute-api.us-east-1.amazonaws.com/searchApiTest/search';
 var loadingdiv = $('#loading');
 var noresults = $('#noresults');
@@ -32,7 +32,7 @@ async function search() {
       resultdiv.append('<p>Found ' + results.length + ' results.</p>');
       for (var item in results) {
         let url = 'https://www.imdb.com/title/' + results[item]._id;
-        let image = results[item]._source.fields.image_url;
+        let image = results[item]._source.fields.image_url ? results[item]._source.fields.image_url.replace('http://ia.media-imdb.com', 'https://m.media-amazon.com') : '';
         let title = results[item]._source.fields.title;
         let plot = results[item]._source.fields.plot;
         let year = results[item]._source.fields.year;
