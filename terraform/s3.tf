@@ -7,3 +7,7 @@ resource "aws_s3_bucket" "s3WebApp" {
 		error_document = "index.html"
 	}
 }
+
+output "s3WebAppBucket" {
+	value = aws_s3_bucket.s3WebApp.bucket
+}
