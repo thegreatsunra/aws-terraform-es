@@ -27,3 +27,7 @@ resource "aws_elasticsearch_domain" "esDomain" {
 }
 CONFIG
 }
+
+output "esDomainEndpoint" {
+	value = aws_elasticsearch_domain.esDomain.endpoint
+}

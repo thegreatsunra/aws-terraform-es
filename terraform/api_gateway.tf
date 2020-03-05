@@ -198,3 +198,7 @@ data "template_file" "iamElasticSearchPolicyTemplate" {
 }
 EOF
 }
+
+output "searchApiId" {
+	value = aws_api_gateway_rest_api.searchApi.id
+}
