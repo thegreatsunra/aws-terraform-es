@@ -1,7 +1,7 @@
 var AWS = require('aws-sdk');
 
-var region = 'us-east-1'; // e.g. us-west-1
-var domain = 'search-movies-YOUR_MOVIES_DOMAIN_ID_HERE.us-east-1.es.amazonaws.com'; // e.g. search-domain.region.es.amazonaws.com
+var region = 'us-east-1'; // e.g. us-east-1
+var domain = 'search-movies-YOUR_MOVIES_DOMAIN_ID_HERE.us-east-1.es.amazonaws.com'; // e.g. search-domain-xxxxxxxxxxxx.region.es.amazonaws.com
 var index = 'movies';
 var type = '_search';
 
