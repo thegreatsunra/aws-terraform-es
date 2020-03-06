@@ -50,5 +50,5 @@ async function search() {
 
 // Tiny function to catch images that fail to load and replace them
 function imageError(image) {
-  image.src = 'images/no-image.png';
+  image.src = 'img/no-image.png';
 }
