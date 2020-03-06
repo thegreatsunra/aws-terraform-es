@@ -1,0 +1,11 @@
+{
+  "name": "aws-terraform-es",
+  "version": "0.1.0",
+  "description": "",
+  "author": "Dane Petersen",
+  "main": "",
+  "scripts": {
+    "deploy": "aws s3 sync  --exclude '*' --include '*.html' --include 'css/*.css' --include 'img/*.png' --include 'js/*.js' --acl public-read --delete www/ s3://xxxxxxxxxxxx.xxxxxxxxxxxx.com",
+    "clean": "aws s3 rm --profile default --recursive s3://xxxxxxxxxxxx.xxxxxxxxxxxx.com"
+  }
+}
